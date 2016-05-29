@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PinBoardViewController.h
 //  Pinterest-Demo
 //
 //  Created by 杨卢青 on 16/5/28.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PinBoardViewController : UICollectionViewController
 
 @end
-
