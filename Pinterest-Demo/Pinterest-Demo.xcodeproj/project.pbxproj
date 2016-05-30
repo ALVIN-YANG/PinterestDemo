@@ -7,13 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14BA8CADDC9B155D82415B55 /* libPods-Pinterest-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7C5AA7221E3FCED4603025 /* libPods-Pinterest-Demo.a */; };
+		393AC7C41CFBE68600D84C41 /* PinBoardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 393AC7C31CFBE68600D84C41 /* PinBoardDetailViewController.m */; };
+		393AC7CA1CFBE7C400D84C41 /* MagicMoveInverseTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 393AC7C71CFBE7C400D84C41 /* MagicMoveInverseTransition.m */; };
+		393AC7CB1CFBE7C400D84C41 /* MagicMoveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 393AC7C91CFBE7C400D84C41 /* MagicMoveTransition.m */; };
+		393AC7CF1CFBE7E300D84C41 /* LQImageWallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 393AC7CE1CFBE7E300D84C41 /* LQImageWallLayout.m */; };
+		393AC7D11CFBEF9400D84C41 /* PinBoardDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393AC7D01CFBEF9400D84C41 /* PinBoardDetailViewController.storyboard */; };
+		393AC7D31CFBEFD400D84C41 /* PinBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393AC7D21CFBEFD400D84C41 /* PinBoard.storyboard */; };
+		393AC7D61CFBF53500D84C41 /* DetailPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 393AC7D51CFBF53500D84C41 /* DetailPageModel.m */; };
+		39A88FFC1CF9DBA300B84035 /* YLQRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A88FF91CF9DBA300B84035 /* YLQRefreshFooter.m */; };
+		39A88FFD1CF9DBA300B84035 /* YLQRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A88FFB1CF9DBA300B84035 /* YLQRefreshHeader.m */; };
+		39A890011CF9E70800B84035 /* TopDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A890001CF9E70800B84035 /* TopDataModel.m */; };
+		39A890041CF9E8E300B84035 /* CellDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A890031CF9E8E300B84035 /* CellDetailModel.m */; };
+		39A890071CF9EA6F00B84035 /* SenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A890061CF9EA6F00B84035 /* SenderItem.m */; };
+		39A8900A1CF9EAE700B84035 /* PhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A890091CF9EAE700B84035 /* PhotoItem.m */; };
 		39BA4C361CF8A72300A91284 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA4C351CF8A72300A91284 /* main.m */; };
-		39BA4C391CF8A72300A91284 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA4C381CF8A72300A91284 /* AppDelegate.m */; };
-		39BA4C3C1CF8A72300A91284 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA4C3B1CF8A72300A91284 /* ViewController.m */; };
 		39BA4C3F1CF8A72300A91284 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C3D1CF8A72300A91284 /* Main.storyboard */; };
 		39BA4C411CF8A72300A91284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C401CF8A72300A91284 /* Assets.xcassets */; };
-		39BA4C441CF8A72300A91284 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C421CF8A72300A91284 /* LaunchScreen.storyboard */; };
 		39BA4C4F1CF8A72400A91284 /* Pinterest_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA4C4E1CF8A72400A91284 /* Pinterest_DemoUITests.m */; };
+		39BA4C5A1CF91C8F00A91284 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C591CF91C8F00A91284 /* Launch Screen.storyboard */; };
+		39BA4C721CF9225700A91284 /* LQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA4C661CF9225700A91284 /* LQAppDelegate.m */; };
+		39BA4C761CF9291900A91284 /* LQTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA4C751CF9291900A91284 /* LQTabbarController.m */; };
+		39BA4C7B1CF9306D00A91284 /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C791CF9306D00A91284 /* Explore.storyboard */; };
+		39BA4C7D1CF9308D00A91284 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C7C1CF9308D00A91284 /* Notification.storyboard */; };
+		39BA4C801CF930A500A91284 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C7E1CF930A500A91284 /* Profile.storyboard */; };
+		39BA4C831CF93AF600A91284 /* PinBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA4C821CF93AF600A91284 /* PinBoardViewController.m */; };
+		39BA4C901CF954F000A91284 /* PinBoardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BA4C8E1CF954F000A91284 /* PinBoardCollectionViewCell.m */; };
+		39BA4C9B1CF97D3300A91284 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C931CF97D3300A91284 /* 1.jpg */; };
+		39BA4C9C1CF97D3300A91284 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C941CF97D3300A91284 /* 2.jpg */; };
+		39BA4C9D1CF97D3300A91284 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C951CF97D3300A91284 /* 3.jpg */; };
+		39BA4C9E1CF97D3300A91284 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C961CF97D3300A91284 /* 4.jpg */; };
+		39BA4C9F1CF97D3300A91284 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C971CF97D3300A91284 /* 5.jpg */; };
+		39BA4CA01CF97D3300A91284 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C981CF97D3300A91284 /* 6.jpg */; };
+		39BA4CA11CF97D3300A91284 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C991CF97D3300A91284 /* 7.jpg */; };
+		39BA4CA21CF97D3300A91284 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39BA4C9A1CF97D3300A91284 /* 8.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +54,62 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06286417FF3814CC91B21A9A /* Pods-Pinterest-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinterest-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pinterest-Demo/Pods-Pinterest-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		393AC7C21CFBE68600D84C41 /* PinBoardDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinBoardDetailViewController.h; sourceTree = "<group>"; };
+		393AC7C31CFBE68600D84C41 /* PinBoardDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinBoardDetailViewController.m; sourceTree = "<group>"; };
+		393AC7C61CFBE7C400D84C41 /* MagicMoveInverseTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMoveInverseTransition.h; sourceTree = "<group>"; };
+		393AC7C71CFBE7C400D84C41 /* MagicMoveInverseTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMoveInverseTransition.m; sourceTree = "<group>"; };
+		393AC7C81CFBE7C400D84C41 /* MagicMoveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMoveTransition.h; sourceTree = "<group>"; };
+		393AC7C91CFBE7C400D84C41 /* MagicMoveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicMoveTransition.m; sourceTree = "<group>"; };
+		393AC7CD1CFBE7E300D84C41 /* LQImageWallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQImageWallLayout.h; sourceTree = "<group>"; };
+		393AC7CE1CFBE7E300D84C41 /* LQImageWallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQImageWallLayout.m; sourceTree = "<group>"; };
+		393AC7D01CFBEF9400D84C41 /* PinBoardDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PinBoardDetailViewController.storyboard; sourceTree = "<group>"; };
+		393AC7D21CFBEFD400D84C41 /* PinBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PinBoard.storyboard; sourceTree = "<group>"; };
+		393AC7D41CFBF53500D84C41 /* DetailPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPageModel.h; sourceTree = "<group>"; };
+		393AC7D51CFBF53500D84C41 /* DetailPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPageModel.m; sourceTree = "<group>"; };
+		39A88FF81CF9DBA300B84035 /* YLQRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLQRefreshFooter.h; sourceTree = "<group>"; };
+		39A88FF91CF9DBA300B84035 /* YLQRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLQRefreshFooter.m; sourceTree = "<group>"; };
+		39A88FFA1CF9DBA300B84035 /* YLQRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLQRefreshHeader.h; sourceTree = "<group>"; };
+		39A88FFB1CF9DBA300B84035 /* YLQRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLQRefreshHeader.m; sourceTree = "<group>"; };
+		39A88FFE1CF9DDA600B84035 /* LQMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LQMacro.h; sourceTree = "<group>"; };
+		39A88FFF1CF9E70800B84035 /* TopDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopDataModel.h; sourceTree = "<group>"; };
+		39A890001CF9E70800B84035 /* TopDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopDataModel.m; sourceTree = "<group>"; };
+		39A890021CF9E8E300B84035 /* CellDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellDetailModel.h; sourceTree = "<group>"; };
+		39A890031CF9E8E300B84035 /* CellDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellDetailModel.m; sourceTree = "<group>"; };
+		39A890051CF9EA6F00B84035 /* SenderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenderItem.h; sourceTree = "<group>"; };
+		39A890061CF9EA6F00B84035 /* SenderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenderItem.m; sourceTree = "<group>"; };
+		39A890081CF9EAE700B84035 /* PhotoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoItem.h; sourceTree = "<group>"; };
+		39A890091CF9EAE700B84035 /* PhotoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoItem.m; sourceTree = "<group>"; };
 		39BA4C311CF8A72300A91284 /* Pinterest-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pinterest-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BA4C351CF8A72300A91284 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		39BA4C371CF8A72300A91284 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		39BA4C381CF8A72300A91284 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		39BA4C3A1CF8A72300A91284 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		39BA4C3B1CF8A72300A91284 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		39BA4C3E1CF8A72300A91284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39BA4C401CF8A72300A91284 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		39BA4C431CF8A72300A91284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39BA4C451CF8A72300A91284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39BA4C4A1CF8A72400A91284 /* Pinterest-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pinterest-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BA4C4E1CF8A72400A91284 /* Pinterest_DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pinterest_DemoUITests.m; sourceTree = "<group>"; };
 		39BA4C501CF8A72400A91284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39BA4C591CF91C8F00A91284 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		39BA4C651CF9225700A91284 /* LQAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LQAppDelegate.h; path = Others/LQAppDelegate.h; sourceTree = "<group>"; };
+		39BA4C661CF9225700A91284 /* LQAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LQAppDelegate.m; path = Others/LQAppDelegate.m; sourceTree = "<group>"; };
+		39BA4C741CF9291900A91284 /* LQTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQTabbarController.h; sourceTree = "<group>"; };
+		39BA4C751CF9291900A91284 /* LQTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQTabbarController.m; sourceTree = "<group>"; };
+		39BA4C7A1CF9306D00A91284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Explore.storyboard; sourceTree = "<group>"; };
+		39BA4C7C1CF9308D00A91284 /* Notification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Notification.storyboard; path = ../../../Notification.storyboard; sourceTree = "<group>"; };
+		39BA4C7F1CF930A500A91284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		39BA4C811CF93AF600A91284 /* PinBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinBoardViewController.h; sourceTree = "<group>"; };
+		39BA4C821CF93AF600A91284 /* PinBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinBoardViewController.m; sourceTree = "<group>"; };
+		39BA4C8D1CF954F000A91284 /* PinBoardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinBoardCollectionViewCell.h; sourceTree = "<group>"; };
+		39BA4C8E1CF954F000A91284 /* PinBoardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinBoardCollectionViewCell.m; sourceTree = "<group>"; };
+		39BA4C931CF97D3300A91284 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		39BA4C941CF97D3300A91284 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		39BA4C951CF97D3300A91284 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		39BA4C961CF97D3300A91284 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		39BA4C971CF97D3300A91284 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		39BA4C981CF97D3300A91284 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		39BA4C991CF97D3300A91284 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		39BA4C9A1CF97D3300A91284 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		9D7C5AA7221E3FCED4603025 /* libPods-Pinterest-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pinterest-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0C4295B6D156F9BB26E08A /* Pods-Pinterest-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pinterest-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pinterest-Demo/Pods-Pinterest-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14BA8CADDC9B155D82415B55 /* libPods-Pinterest-Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +131,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		393AC7C51CFBE7C400D84C41 /* MoveTransition(点击转场) */ = {
+			isa = PBXGroup;
+			children = (
+				393AC7C61CFBE7C400D84C41 /* MagicMoveInverseTransition.h */,
+				393AC7C71CFBE7C400D84C41 /* MagicMoveInverseTransition.m */,
+				393AC7C81CFBE7C400D84C41 /* MagicMoveTransition.h */,
+				393AC7C91CFBE7C400D84C41 /* MagicMoveTransition.m */,
+			);
+			path = "MoveTransition(点击转场)";
+			sourceTree = "<group>";
+		};
+		393AC7CC1CFBE7E300D84C41 /* ImageWallLayout(布局) */ = {
+			isa = PBXGroup;
+			children = (
+				393AC7CD1CFBE7E300D84C41 /* LQImageWallLayout.h */,
+				393AC7CE1CFBE7E300D84C41 /* LQImageWallLayout.m */,
+			);
+			path = "ImageWallLayout(布局)";
+			sourceTree = "<group>";
+		};
 		39BA4C281CF8A72300A91284 = {
 			isa = PBXGroup;
 			children = (
 				39BA4C331CF8A72300A91284 /* Pinterest-Demo */,
 				39BA4C4D1CF8A72400A91284 /* Pinterest-DemoUITests */,
 				39BA4C321CF8A72300A91284 /* Products */,
+				D0AD20ED85D738E21B2D5748 /* Pods */,
+				7F2FFCB076360BFEF04D8DB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,13 +174,10 @@
 		39BA4C331CF8A72300A91284 /* Pinterest-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				39BA4C371CF8A72300A91284 /* AppDelegate.h */,
-				39BA4C381CF8A72300A91284 /* AppDelegate.m */,
-				39BA4C3A1CF8A72300A91284 /* ViewController.h */,
-				39BA4C3B1CF8A72300A91284 /* ViewController.m */,
-				39BA4C3D1CF8A72300A91284 /* Main.storyboard */,
+				39BA4C921CF97D3300A91284 /* Asset */,
+				39BA4C5B1CF9225700A91284 /* Classes */,
 				39BA4C401CF8A72300A91284 /* Assets.xcassets */,
-				39BA4C421CF8A72300A91284 /* LaunchScreen.storyboard */,
+				39BA4C591CF91C8F00A91284 /* Launch Screen.storyboard */,
 				39BA4C451CF8A72300A91284 /* Info.plist */,
 				39BA4C341CF8A72300A91284 /* Supporting Files */,
 			);
@@ -111,6 +201,249 @@
 			path = "Pinterest-DemoUITests";
 			sourceTree = "<group>";
 		};
+		39BA4C5B1CF9225700A91284 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C651CF9225700A91284 /* LQAppDelegate.h */,
+				39BA4C661CF9225700A91284 /* LQAppDelegate.m */,
+				39BA4C6A1CF9225700A91284 /* PinBoard(主页) */,
+				39BA4C6E1CF9225700A91284 /* Explore(探索) */,
+				39BA4C5C1CF9225700A91284 /* Notification(通知) */,
+				39BA4C601CF9225700A91284 /* Profile(个人简介) */,
+				39BA4C641CF9225700A91284 /* Others */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		39BA4C5C1CF9225700A91284 /* Notification(通知) */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C5D1CF9225700A91284 /* Controller */,
+				39BA4C5E1CF9225700A91284 /* Model */,
+				39BA4C5F1CF9225700A91284 /* View */,
+			);
+			name = "Notification(通知)";
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		39BA4C5D1CF9225700A91284 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C7C1CF9308D00A91284 /* Notification.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39BA4C5E1CF9225700A91284 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39BA4C5F1CF9225700A91284 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39BA4C601CF9225700A91284 /* Profile(个人简介) */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C611CF9225700A91284 /* Controller */,
+				39BA4C621CF9225700A91284 /* Model */,
+				39BA4C631CF9225700A91284 /* View */,
+			);
+			name = "Profile(个人简介)";
+			path = "Mine(用户)";
+			sourceTree = "<group>";
+		};
+		39BA4C611CF9225700A91284 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C7E1CF930A500A91284 /* Profile.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39BA4C621CF9225700A91284 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39BA4C631CF9225700A91284 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39BA4C641CF9225700A91284 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C731CF928B800A91284 /* MainControl(TabBar&Navi) */,
+				39BA4C671CF9225700A91284 /* Categorys(分类) */,
+				39BA4C681CF9225700A91284 /* Helpers(工具类) */,
+				39BA4C691CF9225700A91284 /* Macro(宏定义) */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		39BA4C671CF9225700A91284 /* Categorys(分类) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Categorys(分类)";
+			sourceTree = "<group>";
+		};
+		39BA4C681CF9225700A91284 /* Helpers(工具类) */ = {
+			isa = PBXGroup;
+			children = (
+				39A88FF81CF9DBA300B84035 /* YLQRefreshFooter.h */,
+				39A88FF91CF9DBA300B84035 /* YLQRefreshFooter.m */,
+				39A88FFA1CF9DBA300B84035 /* YLQRefreshHeader.h */,
+				39A88FFB1CF9DBA300B84035 /* YLQRefreshHeader.m */,
+			);
+			path = "Helpers(工具类)";
+			sourceTree = "<group>";
+		};
+		39BA4C691CF9225700A91284 /* Macro(宏定义) */ = {
+			isa = PBXGroup;
+			children = (
+				39A88FFE1CF9DDA600B84035 /* LQMacro.h */,
+			);
+			path = "Macro(宏定义)";
+			sourceTree = "<group>";
+		};
+		39BA4C6A1CF9225700A91284 /* PinBoard(主页) */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C6B1CF9225700A91284 /* Controller */,
+				39BA4C6C1CF9225700A91284 /* Model */,
+				39BA4C6D1CF9225700A91284 /* View */,
+			);
+			path = "PinBoard(主页)";
+			sourceTree = "<group>";
+		};
+		39BA4C6B1CF9225700A91284 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				393AC7CC1CFBE7E300D84C41 /* ImageWallLayout(布局) */,
+				393AC7C51CFBE7C400D84C41 /* MoveTransition(点击转场) */,
+				39BA4C811CF93AF600A91284 /* PinBoardViewController.h */,
+				39BA4C821CF93AF600A91284 /* PinBoardViewController.m */,
+				393AC7D21CFBEFD400D84C41 /* PinBoard.storyboard */,
+				393AC7C21CFBE68600D84C41 /* PinBoardDetailViewController.h */,
+				393AC7C31CFBE68600D84C41 /* PinBoardDetailViewController.m */,
+				393AC7D01CFBEF9400D84C41 /* PinBoardDetailViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39BA4C6C1CF9225700A91284 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39A88FFF1CF9E70800B84035 /* TopDataModel.h */,
+				39A890001CF9E70800B84035 /* TopDataModel.m */,
+				39A890021CF9E8E300B84035 /* CellDetailModel.h */,
+				39A890031CF9E8E300B84035 /* CellDetailModel.m */,
+				39A890051CF9EA6F00B84035 /* SenderItem.h */,
+				39A890061CF9EA6F00B84035 /* SenderItem.m */,
+				39A890081CF9EAE700B84035 /* PhotoItem.h */,
+				39A890091CF9EAE700B84035 /* PhotoItem.m */,
+				393AC7D41CFBF53500D84C41 /* DetailPageModel.h */,
+				393AC7D51CFBF53500D84C41 /* DetailPageModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39BA4C6D1CF9225700A91284 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C8D1CF954F000A91284 /* PinBoardCollectionViewCell.h */,
+				39BA4C8E1CF954F000A91284 /* PinBoardCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39BA4C6E1CF9225700A91284 /* Explore(探索) */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C6F1CF9225700A91284 /* Controller */,
+				39BA4C701CF9225700A91284 /* Model */,
+				39BA4C711CF9225700A91284 /* View */,
+			);
+			name = "Explore(探索)";
+			path = "Search(搜索)";
+			sourceTree = "<group>";
+		};
+		39BA4C6F1CF9225700A91284 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C791CF9306D00A91284 /* Explore.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39BA4C701CF9225700A91284 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39BA4C711CF9225700A91284 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39BA4C731CF928B800A91284 /* MainControl(TabBar&Navi) */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C3D1CF8A72300A91284 /* Main.storyboard */,
+				39BA4C741CF9291900A91284 /* LQTabbarController.h */,
+				39BA4C751CF9291900A91284 /* LQTabbarController.m */,
+			);
+			path = "MainControl(TabBar&Navi)";
+			sourceTree = "<group>";
+		};
+		39BA4C921CF97D3300A91284 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				39BA4C931CF97D3300A91284 /* 1.jpg */,
+				39BA4C941CF97D3300A91284 /* 2.jpg */,
+				39BA4C951CF97D3300A91284 /* 3.jpg */,
+				39BA4C961CF97D3300A91284 /* 4.jpg */,
+				39BA4C971CF97D3300A91284 /* 5.jpg */,
+				39BA4C981CF97D3300A91284 /* 6.jpg */,
+				39BA4C991CF97D3300A91284 /* 7.jpg */,
+				39BA4C9A1CF97D3300A91284 /* 8.jpg */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		7F2FFCB076360BFEF04D8DB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D7C5AA7221E3FCED4603025 /* libPods-Pinterest-Demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0AD20ED85D738E21B2D5748 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA0C4295B6D156F9BB26E08A /* Pods-Pinterest-Demo.debug.xcconfig */,
+				06286417FF3814CC91B21A9A /* Pods-Pinterest-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +451,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39BA4C531CF8A72400A91284 /* Build configuration list for PBXNativeTarget "Pinterest-Demo" */;
 			buildPhases = (
+				4200F730DE723F48C7E575DB /* Check Pods Manifest.lock */,
 				39BA4C2D1CF8A72300A91284 /* Sources */,
 				39BA4C2E1CF8A72300A91284 /* Frameworks */,
 				39BA4C2F1CF8A72300A91284 /* Resources */,
+				3E2B73857D98CD7153616738 /* Embed Pods Frameworks */,
+				1AB52B5E9B6929455E4F18BB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,9 +529,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39BA4C441CF8A72300A91284 /* LaunchScreen.storyboard in Resources */,
+				39BA4CA01CF97D3300A91284 /* 6.jpg in Resources */,
+				39BA4C9E1CF97D3300A91284 /* 4.jpg in Resources */,
+				39BA4C9D1CF97D3300A91284 /* 3.jpg in Resources */,
+				39BA4C5A1CF91C8F00A91284 /* Launch Screen.storyboard in Resources */,
+				39BA4C9C1CF97D3300A91284 /* 2.jpg in Resources */,
 				39BA4C411CF8A72300A91284 /* Assets.xcassets in Resources */,
 				39BA4C3F1CF8A72300A91284 /* Main.storyboard in Resources */,
+				39BA4C9F1CF97D3300A91284 /* 5.jpg in Resources */,
+				39BA4C801CF930A500A91284 /* Profile.storyboard in Resources */,
+				393AC7D31CFBEFD400D84C41 /* PinBoard.storyboard in Resources */,
+				39BA4C9B1CF97D3300A91284 /* 1.jpg in Resources */,
+				39BA4CA21CF97D3300A91284 /* 8.jpg in Resources */,
+				39BA4CA11CF97D3300A91284 /* 7.jpg in Resources */,
+				39BA4C7D1CF9308D00A91284 /* Notification.storyboard in Resources */,
+				39BA4C7B1CF9306D00A91284 /* Explore.storyboard in Resources */,
+				393AC7D11CFBEF9400D84C41 /* PinBoardDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,14 +557,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AB52B5E9B6929455E4F18BB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pinterest-Demo/Pods-Pinterest-Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E2B73857D98CD7153616738 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pinterest-Demo/Pods-Pinterest-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4200F730DE723F48C7E575DB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		39BA4C2D1CF8A72300A91284 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39BA4C3C1CF8A72300A91284 /* ViewController.m in Sources */,
-				39BA4C391CF8A72300A91284 /* AppDelegate.m in Sources */,
+				39BA4C761CF9291900A91284 /* LQTabbarController.m in Sources */,
+				39BA4C831CF93AF600A91284 /* PinBoardViewController.m in Sources */,
+				39A8900A1CF9EAE700B84035 /* PhotoItem.m in Sources */,
+				39A890071CF9EA6F00B84035 /* SenderItem.m in Sources */,
+				39A88FFD1CF9DBA300B84035 /* YLQRefreshHeader.m in Sources */,
+				39BA4C721CF9225700A91284 /* LQAppDelegate.m in Sources */,
+				393AC7CB1CFBE7C400D84C41 /* MagicMoveTransition.m in Sources */,
+				393AC7C41CFBE68600D84C41 /* PinBoardDetailViewController.m in Sources */,
+				39A88FFC1CF9DBA300B84035 /* YLQRefreshFooter.m in Sources */,
 				39BA4C361CF8A72300A91284 /* main.m in Sources */,
+				39BA4C901CF954F000A91284 /* PinBoardCollectionViewCell.m in Sources */,
+				39A890041CF9E8E300B84035 /* CellDetailModel.m in Sources */,
+				393AC7CA1CFBE7C400D84C41 /* MagicMoveInverseTransition.m in Sources */,
+				393AC7D61CFBF53500D84C41 /* DetailPageModel.m in Sources */,
+				39A890011CF9E70800B84035 /* TopDataModel.m in Sources */,
+				393AC7CF1CFBE7E300D84C41 /* LQImageWallLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +654,25 @@
 				39BA4C3E1CF8A72300A91284 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
-		39BA4C421CF8A72300A91284 /* LaunchScreen.storyboard */ = {
+		39BA4C791CF9306D00A91284 /* Explore.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				39BA4C431CF8A72300A91284 /* Base */,
+				39BA4C7A1CF9306D00A91284 /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Explore.storyboard;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		39BA4C7E1CF930A500A91284 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39BA4C7F1CF930A500A91284 /* Base */,
+			);
+			name = Profile.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -343,23 +764,29 @@
 		};
 		39BA4C541CF8A72400A91284 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA0C4295B6D156F9BB26E08A /* Pods-Pinterest-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Pinterest-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ALVIN-YANG.Pinterest-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		39BA4C551CF8A72400A91284 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06286417FF3814CC91B21A9A /* Pods-Pinterest-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Pinterest-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ALVIN-YANG.Pinterest-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -404,6 +831,7 @@
 				39BA4C551CF8A72400A91284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39BA4C561CF8A72400A91284 /* Build configuration list for PBXNativeTarget "Pinterest-DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +840,7 @@
 				39BA4C581CF8A72400A91284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

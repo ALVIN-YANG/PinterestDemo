@@ -1,5 +1,5 @@
 //
-//  senderItem.h
+//  SenderItem.h
 //  Pinterest-Demo
 //
 //  Created by 杨卢青 on 16/5/28.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface senderItem : NSObject
+@interface SenderItem : NSObject
 /**
  *  icon
  */

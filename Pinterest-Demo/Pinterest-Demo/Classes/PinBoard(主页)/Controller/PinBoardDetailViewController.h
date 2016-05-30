@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CellDetailModel.h"
 
 @interface PinBoardDetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
+@property (nonatomic, strong) NSLayoutConstraint *imageHCons;
+
+@property (nonatomic, copy) NSString *requestID;
+@property (nonatomic, copy) NSString *imageURL;
+
+@property (nonatomic, strong) CellDetailModel *model;
 @end

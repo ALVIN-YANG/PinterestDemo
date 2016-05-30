@@ -30,17 +30,17 @@
 //    [self setTitle:@"松开🐱上刷新" forState:MJRefreshStatePulling];
 //    [self setTitle:@"玩命加载中..." forState:MJRefreshStateRefreshing];
     //添加logo
-    UIImageView *logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-    [self addSubview:logoView];
-    self.logoView = logoView;
+//    UIImageView *logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+//    [self addSubview:logoView];
+//    self.logoView = logoView;
 }
 
 /**
  *  摆放子控件, 把公司logo放在上面
  */
-- (void)placeSubviews{
-    [super placeSubviews];
-    self.logoView.ylq_center_X = self.ylq_width * 0.5;
-    self.logoView.ylq_y = - self.logoView.ylq_height;
-}
+//- (void)placeSubviews{
+//    [super placeSubviews];
+//    self.logoView.ylq_center_X = self.ylq_width * 0.5;
+//    self.logoView.ylq_y = - self.logoView.ylq_height;
+//}
 @end

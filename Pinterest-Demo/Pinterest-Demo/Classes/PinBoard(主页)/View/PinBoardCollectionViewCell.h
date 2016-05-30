@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CellDetailModel.h"
+#import "SenderItem.h"
+#import "PhotoItem.h"
 
 @interface PinBoardCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong) CellDetailModel *item;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end

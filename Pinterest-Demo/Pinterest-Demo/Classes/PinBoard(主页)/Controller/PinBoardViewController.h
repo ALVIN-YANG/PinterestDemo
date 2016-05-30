@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface PinBoardViewController : UICollectionViewController
+
+@property (nonatomic, strong) NSIndexPath *indexPath;
+
+@property (nonatomic, assign) CGRect finalCellRect;
 
 @end

@@ -9,5 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface PhotoItem : NSObject
-
+/**
+ *  宽
+ */
+@property (nonatomic, assign) NSNumber *width;
+/**
+ *  高
+ */
+@property (nonatomic, copy) NSNumber *height;
+/**
+ *  图片路径
+ */
+@property (nonatomic, copy) NSString *path;
 @end

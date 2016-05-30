@@ -1,5 +1,5 @@
 //
-//  senderItem.m
+//  SenderItem.m
 //  Pinterest-Demo
 //
 //  Created by 杨卢青 on 16/5/28.
