@@ -23,7 +23,7 @@
 #import "SenderItem.h"
 #import "PhotoItem.h"
 
-@interface PinBoardViewController ()<ImageWallLayoutDelegate, UINavigationControllerDelegate>
+@interface PinBoardViewController ()<ImageWallLayoutDelegate, UINavigationControllerDelegate, PinBoardDetailViewControllerDelegate>
 {
     NSMutableArray *_imageArray;
     NSInteger _nextStartIndex;
@@ -177,6 +177,13 @@ static NSString * const reuseIdentifier = @"PinBoardCell";
     }
 }
 
+#pragma mark - PinBoardDetailViewControllerDelegate
+- (void)backHomeWithIndexPath:(NSIndexPath *)indexPath
+{
+    _indexPath = indexPath;
+    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+}
+
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -198,11 +205,11 @@ static NSString * const reuseIdentifier = @"PinBoardCell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PinBoardDetailViewController *detailVC = [[UIStoryboard storyboardWithName:NSStringFromClass([PinBoardDetailViewController class]) bundle:nil] instantiateInitialViewController];
-    CellDetailModel *cellModel = _itemArray[indexPath.row];
-//    PinBoardCollectionViewCell *cell = (PinBoardCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-//    detailVC.photoImageView.image = cell.imageView.image;
-    detailVC.model = cellModel;
-//    detailVC.imageHCons.constant = (self.view.bounds.size.width - 40) / [cellModel.photo.width floatValue] * [cellModel.photo.height floatValue];
+    
+    detailVC.delegate = self;
+    detailVC.indexPath = indexPath;
+    _indexPath = indexPath;
+    detailVC.itemArray = _itemArray;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 

@@ -15,6 +15,8 @@
 		393AC7D11CFBEF9400D84C41 /* PinBoardDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393AC7D01CFBEF9400D84C41 /* PinBoardDetailViewController.storyboard */; };
 		393AC7D31CFBEFD400D84C41 /* PinBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393AC7D21CFBEFD400D84C41 /* PinBoard.storyboard */; };
 		393AC7D61CFBF53500D84C41 /* DetailPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 393AC7D51CFBF53500D84C41 /* DetailPageModel.m */; };
+		393AC83A1CFC8E0E00D84C41 /* PinDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 393AC8381CFC8E0E00D84C41 /* PinDetailViewCell.m */; };
+		393AC83B1CFC8E0E00D84C41 /* PinDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 393AC8391CFC8E0E00D84C41 /* PinDetailViewCell.xib */; };
 		39A88FFC1CF9DBA300B84035 /* YLQRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A88FF91CF9DBA300B84035 /* YLQRefreshFooter.m */; };
 		39A88FFD1CF9DBA300B84035 /* YLQRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A88FFB1CF9DBA300B84035 /* YLQRefreshHeader.m */; };
 		39A890011CF9E70800B84035 /* TopDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A890001CF9E70800B84035 /* TopDataModel.m */; };
@@ -67,6 +69,9 @@
 		393AC7D21CFBEFD400D84C41 /* PinBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PinBoard.storyboard; sourceTree = "<group>"; };
 		393AC7D41CFBF53500D84C41 /* DetailPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPageModel.h; sourceTree = "<group>"; };
 		393AC7D51CFBF53500D84C41 /* DetailPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPageModel.m; sourceTree = "<group>"; };
+		393AC8371CFC8E0E00D84C41 /* PinDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinDetailViewCell.h; sourceTree = "<group>"; };
+		393AC8381CFC8E0E00D84C41 /* PinDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinDetailViewCell.m; sourceTree = "<group>"; };
+		393AC8391CFC8E0E00D84C41 /* PinDetailViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinDetailViewCell.xib; sourceTree = "<group>"; };
 		39A88FF81CF9DBA300B84035 /* YLQRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLQRefreshFooter.h; sourceTree = "<group>"; };
 		39A88FF91CF9DBA300B84035 /* YLQRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLQRefreshFooter.m; sourceTree = "<group>"; };
 		39A88FFA1CF9DBA300B84035 /* YLQRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLQRefreshHeader.h; sourceTree = "<group>"; };
@@ -339,6 +344,9 @@
 				393AC7C21CFBE68600D84C41 /* PinBoardDetailViewController.h */,
 				393AC7C31CFBE68600D84C41 /* PinBoardDetailViewController.m */,
 				393AC7D01CFBEF9400D84C41 /* PinBoardDetailViewController.storyboard */,
+				393AC8371CFC8E0E00D84C41 /* PinDetailViewCell.h */,
+				393AC8381CFC8E0E00D84C41 /* PinDetailViewCell.m */,
+				393AC8391CFC8E0E00D84C41 /* PinDetailViewCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -541,6 +549,7 @@
 				393AC7D31CFBEFD400D84C41 /* PinBoard.storyboard in Resources */,
 				39BA4C9B1CF97D3300A91284 /* 1.jpg in Resources */,
 				39BA4CA21CF97D3300A91284 /* 8.jpg in Resources */,
+				393AC83B1CFC8E0E00D84C41 /* PinDetailViewCell.xib in Resources */,
 				39BA4CA11CF97D3300A91284 /* 7.jpg in Resources */,
 				39BA4C7D1CF9308D00A91284 /* Notification.storyboard in Resources */,
 				39BA4C7B1CF9306D00A91284 /* Explore.storyboard in Resources */,
@@ -619,6 +628,7 @@
 				393AC7CB1CFBE7C400D84C41 /* MagicMoveTransition.m in Sources */,
 				393AC7C41CFBE68600D84C41 /* PinBoardDetailViewController.m in Sources */,
 				39A88FFC1CF9DBA300B84035 /* YLQRefreshFooter.m in Sources */,
+				393AC83A1CFC8E0E00D84C41 /* PinDetailViewCell.m in Sources */,
 				39BA4C361CF8A72300A91284 /* main.m in Sources */,
 				39BA4C901CF954F000A91284 /* PinBoardCollectionViewCell.m in Sources */,
 				39A890041CF9E8E300B84035 /* CellDetailModel.m in Sources */,

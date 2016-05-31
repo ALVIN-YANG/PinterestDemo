@@ -10,6 +10,7 @@
 #import "PinBoardViewController.h"
 #import "PinBoardDetailViewController.h"
 #import "PinBoardCollectionViewCell.h"
+#import "PinDetailViewCell.h"
 
 
 @implementation MagicMoveInverseTransition
@@ -26,17 +27,18 @@
     UIView *containerView = [transitionContext containerView];
     
     //在前一个VC上创建一个截图
-    UIView *snapShotView = [fromVC.photoImageView snapshotViewAfterScreenUpdates:NO];
+     PinDetailViewCell *detailCell = (PinDetailViewCell *)[fromVC.collectionView cellForItemAtIndexPath:fromVC.indexPath];
+    UIView *snapShotView = [detailCell.detailImageView snapshotViewAfterScreenUpdates:NO];
     snapShotView.backgroundColor = [UIColor clearColor];
-    snapShotView.frame = [containerView convertRect:fromVC.photoImageView.frame fromView:fromVC.photoImageView.superview];
-    fromVC.photoImageView.hidden = YES;
+    snapShotView.frame = [containerView convertRect:detailCell.detailImageView.frame fromView:detailCell.detailImageView.superview];
+    detailCell.detailImageView.hidden = YES;
     
     //初始化fromVC的位置, 滚到fromVC那里就在toVC那里
     toVC.view.frame = [transitionContext finalFrameForViewController:toVC];
     
     //获取toVC中图片的位置
-    PinBoardCollectionViewCell *cell = (PinBoardCollectionViewCell *)[toVC.collectionView cellForItemAtIndexPath:toVC.indexPath];
-    cell.imageView.hidden = NO;
+    PinBoardCollectionViewCell *cell = (PinBoardCollectionViewCell *)[toVC.collectionView cellForItemAtIndexPath:fromVC.indexPath];
+    cell.imageView.hidden = YES;
     
     //装到ContainerView 顺序很重要
     [containerView insertSubview:toVC.view belowSubview:fromVC.view];
@@ -52,10 +54,10 @@
      */
     [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0f usingSpringWithDamping:1.0f initialSpringVelocity:2.0f options:UIViewAnimationOptionTransitionNone animations:^{
         fromVC.view.alpha = 0.0f;
-        snapShotView.frame = toVC.finalCellRect;
+        snapShotView.frame = [containerView convertRect:cell.imageView.frame fromView:cell.imageView.superview];
     } completion:^(BOOL finished) {
         [snapShotView removeFromSuperview];
-        fromVC.photoImageView.hidden = NO;
+        detailCell.detailImageView.hidden = NO;
         cell.imageView.hidden = NO;
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];

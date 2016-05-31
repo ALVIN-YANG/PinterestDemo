@@ -7,7 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CellDetailModel.h"
+
+@protocol PinDetailViewCellDelegate <NSObject>
+
+- (void)backToPinBoardViewControllerWithIndex:(NSIndexPath *)indexPath;
+
+@end
 
 @interface PinDetailViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *detailImageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
 
+@property (weak, nonatomic) IBOutlet UILabel *pageLabel;
+@property (nonatomic, strong) CellDetailModel *item;
+
+@property (nonatomic, strong) NSIndexPath *indexPath;
+
+@property (nonatomic, weak) id <PinDetailViewCellDelegate> delegate;
 @end

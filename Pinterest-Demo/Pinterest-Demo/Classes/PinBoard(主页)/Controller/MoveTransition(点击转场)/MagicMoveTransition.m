@@ -10,6 +10,8 @@
 #import "PinBoardViewController.h"
 #import "PinBoardDetailViewController.h"
 #import "PinBoardCollectionViewCell.h"
+#import "PinDetailViewCell.h"
+#import "CellDetailModel.h"
 
 @implementation MagicMoveTransition
 
@@ -37,14 +39,27 @@
     snapShotView.frame = fromVC.finalCellRect = [containerView convertRect:cell.imageView.frame fromView:cell.imageView.superview];
     cell.imageView.hidden = YES;
     
-    //设置第二个控制器的位置, 透明度
+  
+    //获取toVC中图片的位置
     toVC.view.frame = [transitionContext finalFrameForViewController:toVC];
-    toVC.view.alpha = 0;
-    toVC.photoImageView.hidden = YES;
     
-    //把动画前后的两个ViewController加到容器中, 顺序很重要, snapShotView在上方
+    //此时的Cell还不能被创建, 只能从数据中得到frame
+    //求更好的解决办法 😭
+    CellDetailModel *model = toVC.itemArray[toVC.indexPath.row];
+    CGFloat scale = ([UIScreen mainScreen].bounds.size.width - 40) / [model.photo.width floatValue];
+    CGRect finalRect = CGRectMake(20, 64, [model.photo.width floatValue] * scale, [model.photo.height floatValue] * scale);
+    
+    toVC.view.alpha = 0;
+    
+    
+    //把动画前后的两个ViewController加到容器中, 顺序很重要,
     [containerView addSubview:toVC.view];
     [containerView addSubview:snapShotView];
+    
+    
+    //此句会让detailCell 加载判定一次隐藏imageview
+    //😭为什么CollectionView reloadData不行啊 😭
+    [containerView layoutIfNeeded];
     
     //动起来 第二个控制器的透明度0~1; 让截图SnapShotView的位置更新到最新;
     /**
@@ -54,20 +69,18 @@
      initialSpringVelocity : 初始速度
      options : 动画过度效果
      */
-     [containerView layoutIfNeeded];
     [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0f usingSpringWithDamping:1.0f initialSpringVelocity:2.0f options:UIViewAnimationOptionTransitionNone animations:^{
         
         toVC.view.alpha = 1.0;
+        snapShotView.frame = finalRect;
         
-        //frame是相对于父控件, 所以superView
-        snapShotView.frame = [containerView convertRect:toVC.photoImageView.frame fromView:toVC.photoImageView.superview];
-       
     } completion:^(BOOL finished) {
         //为了让回来的时候, cell上的图片显示, 必须要让cell上的图片显示出来
-        toVC.photoImageView.hidden = NO;
         cell.imageView.hidden = NO;
         [snapShotView removeFromSuperview];
         
+        //这句 会让 重新加载cell 判定imageview的显示
+        [toVC.collectionView reloadData];
         //告诉系统动画结束
         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
     }];

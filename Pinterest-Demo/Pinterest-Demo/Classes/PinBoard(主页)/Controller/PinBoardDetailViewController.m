@@ -11,23 +11,25 @@
 #import "MagicMoveInverseTransition.h"
 #import "DetailPageModel.h"
 
+#import "PinDetailViewCell.h"
+
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <PINRemoteImage/PINImageView+PINRemoteImage.h>
 #import <PINCache/PINCache.h>
 #import "LQMacro.h"
 
-@interface PinBoardDetailViewController ()<UINavigationControllerDelegate>
+@interface PinBoardDetailViewController ()<UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, PinDetailViewCellDelegate>
 
 //请求管理者
 @property (nonatomic, strong) AFHTTPSessionManager *mgr;
-//数据:模型数组
-@property (nonatomic, strong) NSArray *itemArray;
 
 
 @end
 
 @implementation PinBoardDetailViewController
+
+static NSString * const Identifier = @"PinDetailViewCell";
 
 #pragma mark - init
 
@@ -42,27 +44,6 @@
 {
     _model = model;
    
-    
-//
-//    CGFloat imageH = (self.view.bounds.size.width - 40) / [model.photo.width floatValue] * [model.photo.height floatValue];
-//    self.imageHeightConstraint.constant = imageH;
-//    [self.view layoutIfNeeded];
-    
-    //取消加载
-//    [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
-    //拼接parameter
-//    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-//    parameters[@"blog_id"] = model.id;
-//    [self.mgr GET:LQDetailURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        [responseObject writeToFile:@"/Users/YLQ/Desktop/Pinterest-Demo/DetailData.plist" atomically:YES];
-//        
-//        //        DetailPageModel *topModel = [DetailPageModel mj_objectWithKeyValues:responseObject];
-//        
-//        
-//        
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        NSLog(@"请求失败");
-//    }];
 }
 
 #pragma mark - life Cycle
@@ -70,13 +51,8 @@
     [super viewDidLoad];
     [self prefersStatusBarHidden];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
-    self.automaticallyAdjustsScrollViewInsets = YES;
-    self.photoImageView.backgroundColor = YLQRandomColor;
     
-    self.imageHeightConstraint.constant = (self.view.bounds.size.width - 40) / [_model.photo.width floatValue] * [_model.photo.height floatValue];
-    
-    NSArray *array = [_model.photo.path componentsSeparatedByString:@"_webp"];
-    [_photoImageView pin_setImageFromURL:[NSURL URLWithString:array[0]]];
+    [self setupCollectionView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -84,14 +60,70 @@
     self.navigationController.delegate = self;
 }
 
+#pragma mark - Helpers
 - (BOOL)prefersStatusBarHidden
 {
     return YES;//隐藏为YES，显示为NO
 }
-- (IBAction)backButtonClick:(id)sender
+
+- (void)setupCollectionView
 {
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.minimumLineSpacing = 0;
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    layout.itemSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height);
+    
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    collectionView.pagingEnabled = YES;
+    
+    collectionView.delegate = self;
+    collectionView.dataSource = self;
+    self.collectionView = collectionView;
+    [self.view addSubview:collectionView];
+    
+    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([PinDetailViewCell class]) bundle:nil] forCellWithReuseIdentifier:Identifier];
+
+    //定位到相应页面
+    [self.collectionView scrollToItemAtIndexPath:self.indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    NSLog(@"detailVC.indexPath:%ld", self.indexPath.row);
+
+}
+
+#pragma mark - PinDetailViewCellDelegate
+- (void)backToPinBoardViewControllerWithIndex:(NSIndexPath *)indexPath
+{
+    _indexPath = indexPath;
+    if ([self.delegate respondsToSelector:@selector(backHomeWithIndexPath:)]) {
+        [self.delegate backHomeWithIndexPath:indexPath];
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return _itemArray.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    PinDetailViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:Identifier forIndexPath:indexPath];
+    cell.pageLabel.text = [NSString stringWithFormat:@"第%ld页", indexPath.row];
+    cell.indexPath = indexPath;
+    CellDetailModel *item = _itemArray[indexPath.row];
+    cell.item = item;
+    cell.delegate = self;
+    
+    if (self.view.alpha < 1.0) {
+        cell.detailImageView.hidden = YES;
+    } else {
+        cell.detailImageView.hidden = NO;
+    }
+    return cell;
+}
+
+
 
 #pragma mark - UINavigationControllerDelegate
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC

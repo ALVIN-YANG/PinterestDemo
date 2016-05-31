@@ -9,14 +9,27 @@
 #import <UIKit/UIKit.h>
 #import "CellDetailModel.h"
 
+@protocol PinBoardDetailViewControllerDelegate <NSObject>
+
+- (void)backHomeWithIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface PinBoardDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
-@property (nonatomic, strong) NSLayoutConstraint *imageHCons;
 
-@property (nonatomic, copy) NSString *requestID;
-@property (nonatomic, copy) NSString *imageURL;
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) CellDetailModel *model;
+
+@property (nonatomic, assign) NSInteger nowIndex;
+@property (nonatomic, strong) NSMutableArray *itemArray;
+
+
+@property (nonatomic, strong) NSIndexPath *indexPath;
+
+@property (nonatomic, assign) CGRect finalCellRect;
+
+@property (nonatomic, weak) id <PinBoardDetailViewControllerDelegate> delegate;
 @end
