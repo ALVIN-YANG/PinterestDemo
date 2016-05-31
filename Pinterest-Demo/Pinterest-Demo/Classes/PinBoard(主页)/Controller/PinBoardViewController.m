@@ -157,6 +157,9 @@ static NSString * const reuseIdentifier = @"PinBoardCell";
         [_itemArray addObjectsFromArray:[CellDetailModel mj_objectArrayWithKeyValuesArray:topModel.object_list]];
         NSLog(@"主 数据量:%ld", self.itemArray.count);
         [self.collectionView reloadData];
+        
+        NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:_itemArray, @"itemArray", nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"shuaxin" object:nil userInfo:dict];
         //结束刷新
         [self.collectionView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -182,6 +185,18 @@ static NSString * const reuseIdentifier = @"PinBoardCell";
 {
     _indexPath = indexPath;
     [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+}
+
+- (void)needMoreDataFromYou
+{
+    NSLog(@"需要更多数据");
+    [self loadNewData];
+    
+   
+    
+    if ([self.delegate respondsToSelector:@selector(refreshDetailViewWithData:)]) {
+        [self.delegate refreshDetailViewWithData:_itemArray];
+    }
 }
 
 #pragma mark <UICollectionViewDataSource>

@@ -23,6 +23,8 @@
 @property (nonatomic, strong) CellDetailModel *item;
 
 @property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, assign) NSInteger nowIndex;
+
 
 @property (nonatomic, weak) id <PinDetailViewCellDelegate> delegate;
 @end

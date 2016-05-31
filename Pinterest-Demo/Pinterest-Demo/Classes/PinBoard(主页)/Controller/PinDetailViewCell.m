@@ -17,7 +17,7 @@
 {
     _item = item;
     self.detailImageView.backgroundColor = YLQRandomColor;
-    
+    self.pageLabel.text = [NSString stringWithFormat:@"第%ld页", _indexPath.row];
     self.imageHeightConstraint.constant = ([UIScreen mainScreen].bounds.size.width - 40) / [_item.photo.width floatValue] * [_item.photo.height floatValue];
     
     NSArray *array = [_item.photo.path componentsSeparatedByString:@"_webp"];

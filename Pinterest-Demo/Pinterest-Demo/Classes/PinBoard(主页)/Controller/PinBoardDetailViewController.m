@@ -19,7 +19,7 @@
 #import <PINCache/PINCache.h>
 #import "LQMacro.h"
 
-@interface PinBoardDetailViewController ()<UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, PinDetailViewCellDelegate>
+@interface PinBoardDetailViewController ()<UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, PinDetailViewCellDelegate, PinBoardViewControllerDelegate>
 
 //请求管理者
 @property (nonatomic, strong) AFHTTPSessionManager *mgr;
@@ -53,6 +53,15 @@ static NSString * const Identifier = @"PinDetailViewCell";
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     
     [self setupCollectionView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationAction:) name:@"shuaxin" object:nil];
+}
+
+-(void)notificationAction:(NSNotification *)notification{
+    NSMutableArray *itemArray = [notification.userInfo objectForKey:@"itemArray"];
+    _itemArray = itemArray;
+    NSLog(@"itemarray.count:%ld", itemArray.count);
+    [self.collectionView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -100,6 +109,14 @@ static NSString * const Identifier = @"PinDetailViewCell";
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark - PinBoardViewControllerDelegate
+- (void)refreshDetailViewWithData:(NSMutableArray *)itemArray
+{
+    _itemArray = itemArray;
+    [self.collectionView reloadData];
+    NSLog(@"itemArray.count:%ld", _itemArray.count);
+}
+
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -109,7 +126,7 @@ static NSString * const Identifier = @"PinDetailViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PinDetailViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:Identifier forIndexPath:indexPath];
-    cell.pageLabel.text = [NSString stringWithFormat:@"第%ld页", indexPath.row];
+    
     cell.indexPath = indexPath;
     CellDetailModel *item = _itemArray[indexPath.row];
     cell.item = item;
@@ -123,6 +140,18 @@ static NSString * const Identifier = @"PinDetailViewCell";
     return cell;
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //压栈, first是最后一个
+    NSIndexPath *visibleIndexPath = [[self.collectionView indexPathsForVisibleItems] firstObject];
+    
+    if (visibleIndexPath.row == (_itemArray.count - 2)) {
+        if ([self.delegate respondsToSelector:@selector(needMoreDataFromYou)]) {
+            [self.delegate needMoreDataFromYou];
+        }
+    }
+}
 
 
 #pragma mark - UINavigationControllerDelegate

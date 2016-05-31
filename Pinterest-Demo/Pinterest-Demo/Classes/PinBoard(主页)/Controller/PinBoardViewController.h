@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PinBoardViewControllerDelegate <NSObject>
+
+- (void)refreshDetailViewWithData:(NSMutableArray *)itemArray;
+
+@end
 
 @interface PinBoardViewController : UICollectionViewController
 
@@ -15,4 +20,6 @@
 
 @property (nonatomic, assign) CGRect finalCellRect;
 
+
+@property (nonatomic, weak) id <PinBoardViewControllerDelegate> delegate;
 @end

@@ -13,6 +13,7 @@
 
 - (void)backHomeWithIndexPath:(NSIndexPath *)indexPath;
 
+- (void)needMoreDataFromYou;
 @end
 
 @interface PinBoardDetailViewController : UIViewController
