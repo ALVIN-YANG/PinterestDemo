@@ -188,6 +188,10 @@
                                                 <constraint firstItem="vJO-oA-CgR" firstAttribute="top" secondItem="4Ru-EP-euh" secondAttribute="top" constant="5" id="eZe-xQ-Aew"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-9s-vy6">
+                                            <rect key="frame" x="0.0" y="0.0" width="194" height="133"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oP8-R8-15U">
                                             <rect key="frame" x="0.0" y="0.0" width="194" height="133"/>
                                         </imageView>
@@ -196,12 +200,16 @@
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="YSR-CP-Py5" secondAttribute="bottom" id="7Hx-CL-0Zw"/>
+                                    <constraint firstItem="Jzq-9s-vy6" firstAttribute="height" secondItem="oP8-R8-15U" secondAttribute="height" id="I6m-ca-mIy"/>
                                     <constraint firstItem="YSR-CP-Py5" firstAttribute="leading" secondItem="48t-oe-IXg" secondAttribute="leading" id="KII-Zi-fYV"/>
                                     <constraint firstAttribute="trailing" secondItem="oP8-R8-15U" secondAttribute="trailing" id="R7W-s3-kcL"/>
                                     <constraint firstAttribute="trailing" secondItem="4Ru-EP-euh" secondAttribute="trailing" id="RV0-JV-P7s"/>
+                                    <constraint firstItem="Jzq-9s-vy6" firstAttribute="top" secondItem="oP8-R8-15U" secondAttribute="top" id="TYY-gf-noz"/>
                                     <constraint firstAttribute="trailing" secondItem="YSR-CP-Py5" secondAttribute="trailing" id="WWl-M2-kQt"/>
                                     <constraint firstItem="YSR-CP-Py5" firstAttribute="top" secondItem="4Ru-EP-euh" secondAttribute="bottom" id="ZEJ-zf-J4i"/>
                                     <constraint firstItem="4Ru-EP-euh" firstAttribute="top" secondItem="oP8-R8-15U" secondAttribute="bottom" id="eGG-5m-HBd"/>
+                                    <constraint firstItem="Jzq-9s-vy6" firstAttribute="leading" secondItem="oP8-R8-15U" secondAttribute="leading" id="g6e-Dq-1nX"/>
+                                    <constraint firstItem="Jzq-9s-vy6" firstAttribute="width" secondItem="oP8-R8-15U" secondAttribute="width" id="u3O-dE-MLB"/>
                                     <constraint firstItem="oP8-R8-15U" firstAttribute="leading" secondItem="48t-oe-IXg" secondAttribute="leading" id="u5O-lc-bi0"/>
                                     <constraint firstItem="oP8-R8-15U" firstAttribute="top" secondItem="48t-oe-IXg" secondAttribute="top" id="xD6-gt-Cv2"/>
                                     <constraint firstItem="4Ru-EP-euh" firstAttribute="leading" secondItem="48t-oe-IXg" secondAttribute="leading" id="z09-D0-fM9"/>
@@ -212,6 +220,7 @@
                                     <outlet property="imageView" destination="oP8-R8-15U" id="uz3-w8-pZu"/>
                                     <outlet property="msgHeightConstraint" destination="DoN-Pa-YAA" id="TAh-Xc-Rfc"/>
                                     <outlet property="msgLabel" destination="vJO-oA-CgR" id="rtx-VX-TdL"/>
+                                    <outlet property="placeholderView" destination="Jzq-9s-vy6" id="PqS-A6-05m"/>
                                     <outlet property="userDetailLabel" destination="oMN-DM-Yct" id="LtV-OO-Myx"/>
                                     <outlet property="userNameLabel" destination="8s4-Gb-kmY" id="B17-Pl-0Kq"/>
                                 </connections>

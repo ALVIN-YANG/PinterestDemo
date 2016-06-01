@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userDetailLabel;
 @property (weak, nonatomic) IBOutlet UILabel *fromLabel;
+@property (weak, nonatomic) IBOutlet UIView *placeholderView;
 
 @end
 
@@ -30,6 +31,7 @@
     [super awakeFromNib];
     // Initialization code
     
+    self.placeholderView.backgroundColor = YLQRandomColor;
     self.layer.cornerRadius = 7;
 }
 
@@ -40,7 +42,6 @@
     //要把后缀截掉
     NSArray *array = [item.photo.path componentsSeparatedByString:@"_webp"];
     [_imageView setPin_updateWithProgress:YES];
-    self.imageView.backgroundColor = YLQRandomColor;
     self.imageView.alpha = 0.0f;
     __weak PinBoardCollectionViewCell *weakCell = self;
     
