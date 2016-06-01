@@ -11,6 +11,15 @@
 #import <PINCache/PINCache.h>
 #import "LQMacro.h"
 
+@interface PinDetailViewCell()<UIScrollViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *topNaviView;
+@property (weak, nonatomic) IBOutlet UIView *containView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *containViewBottomSpaceToSubViewContstrait;
+
+@end
+
 @implementation PinDetailViewCell
 
 - (void)setItem:(CellDetailModel *)item
@@ -27,11 +36,39 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    [self configContainView];
+}
+
+- (void)configContainView
+{
+    
+        self.containViewBottomSpaceToSubViewContstrait.constant = [UIScreen mainScreen].bounds.size.height - self.imageHeightConstraint.constant - 200;
 }
 
 - (IBAction)backButtonClick:(id)sender {
     if ([self.delegate respondsToSelector:@selector(backToPinBoardViewControllerWithIndex:)]) {
         [self.delegate backToPinBoardViewControllerWithIndex:_indexPath];
+    }
+}
+
+#pragma mark - ScrollViewDelegate
+//下拉跟随
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == self.scrollView && scrollView.contentOffset.y < 0) {
+        CGRect topRect = self.topNaviView.frame;
+        topRect.origin.y = - scrollView.contentOffset.y;
+        self.topNaviView.frame = topRect;
+        
+    }
+}
+
+//滑动返回
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    NSLog(@"contentOffset.y : %.2f", self.scrollView.contentOffset.y);
+    if (scrollView == self.scrollView && self.scrollView.contentOffset.y < - 50) {
+        [self backButtonClick:nil];
     }
 }
 

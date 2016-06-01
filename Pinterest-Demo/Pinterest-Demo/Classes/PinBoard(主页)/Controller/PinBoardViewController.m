@@ -192,8 +192,6 @@ static NSString * const reuseIdentifier = @"PinBoardCell";
     NSLog(@"需要更多数据");
     [self loadNewData];
     
-   
-    
     if ([self.delegate respondsToSelector:@selector(refreshDetailViewWithData:)]) {
         [self.delegate refreshDetailViewWithData:_itemArray];
     }
