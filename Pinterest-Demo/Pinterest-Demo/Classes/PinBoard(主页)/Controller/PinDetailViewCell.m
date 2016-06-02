@@ -31,11 +31,6 @@
     
     NSArray *array = [_item.photo.path componentsSeparatedByString:@"_webp"];
     [_detailImageView pin_setImageFromURL:[NSURL URLWithString:array[0]]];
-    
-    
-
-    
-    NSLog(@"\nself.view.width = %.2f \n cell.frame.width = %.2f", [UIScreen mainScreen].bounds.size.width, self.containerView.frame.size.width);
 }
 
 - (void)awakeFromNib {
@@ -71,7 +66,6 @@
 //滑动返回
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    NSLog(@"contentOffset.y : %.2f", self.scrollView.contentOffset.y);
     if (scrollView == self.scrollView && self.scrollView.contentOffset.y < - 50) {
         [self backButtonClick:nil];
     }

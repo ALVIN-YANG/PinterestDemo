@@ -47,14 +47,12 @@ static NSString * const Identifier = @"PinDetailViewCell";
 }
 
 #pragma mark - life Cycle
-- (void)loadView
-{
-    [super loadView];
-    
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+ 
     
     [self prefersStatusBarHidden];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
@@ -88,9 +86,10 @@ static NSString * const Identifier = @"PinDetailViewCell";
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.minimumLineSpacing = 0;
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    layout.itemSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height);
+    layout.itemSize = CGSizeMake(self.view.bounds.size.width + 20, self.view.bounds.size.height);
     
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    //间距为20, 在xib中设置子视图偏移20 实现间距
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width + 20, self.view.bounds.size.height) collectionViewLayout:layout];
     collectionView.pagingEnabled = YES;
     
     collectionView.delegate = self;
@@ -102,8 +101,6 @@ static NSString * const Identifier = @"PinDetailViewCell";
 
     //定位到相应页面
     [self.collectionView scrollToItemAtIndexPath:self.indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
-    NSLog(@"detailVC.indexPath:%ld", self.indexPath.row);
-
 }
 
 #pragma mark - PinDetailViewCellDelegate
@@ -144,7 +141,7 @@ static NSString * const Identifier = @"PinDetailViewCell";
     } else {
         cell.detailImageView.hidden = NO;
     }
- 
+    
     return cell;
 }
 
