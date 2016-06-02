@@ -18,6 +18,10 @@
 @interface PinDetailViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *detailImageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *topNaviView;
+@property (weak, nonatomic) IBOutlet UIView *containView;
 
 @property (weak, nonatomic) IBOutlet UILabel *pageLabel;
 @property (nonatomic, strong) CellDetailModel *item;

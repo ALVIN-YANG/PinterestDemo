@@ -13,10 +13,10 @@
 
 @interface PinDetailViewCell()<UIScrollViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIView *topNaviView;
-@property (weak, nonatomic) IBOutlet UIView *containView;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *containViewBottomSpaceToSubViewContstrait;
+
+
 
 @end
 
@@ -31,18 +31,23 @@
     
     NSArray *array = [_item.photo.path componentsSeparatedByString:@"_webp"];
     [_detailImageView pin_setImageFromURL:[NSURL URLWithString:array[0]]];
+    
+    
+
+    
+    NSLog(@"\nself.view.width = %.2f \n cell.frame.width = %.2f", [UIScreen mainScreen].bounds.size.width, self.containerView.frame.size.width);
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+   
     [self configContainView];
 }
 
 - (void)configContainView
 {
-    
-        self.containViewBottomSpaceToSubViewContstrait.constant = [UIScreen mainScreen].bounds.size.height - self.imageHeightConstraint.constant - 200;
+    //确保ScrollView可以滚动
+    self.containViewBottomSpaceToSubViewContstrait.constant = [UIScreen mainScreen].bounds.size.height - self.imageHeightConstraint.constant - 120;
 }
 
 - (IBAction)backButtonClick:(id)sender {

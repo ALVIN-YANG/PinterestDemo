@@ -47,8 +47,15 @@ static NSString * const Identifier = @"PinDetailViewCell";
 }
 
 #pragma mark - life Cycle
+- (void)loadView
+{
+    [super loadView];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self prefersStatusBarHidden];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     
@@ -137,6 +144,7 @@ static NSString * const Identifier = @"PinDetailViewCell";
     } else {
         cell.detailImageView.hidden = NO;
     }
+ 
     return cell;
 }
 
