@@ -130,7 +130,7 @@ static NSString * const Identifier = @"PinDetailViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PinDetailViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:Identifier forIndexPath:indexPath];
-    
+    cell.detailImageView.image = nil;
     cell.indexPath = indexPath;
     CellDetailModel *item = _itemArray[indexPath.row];
     cell.item = item;
