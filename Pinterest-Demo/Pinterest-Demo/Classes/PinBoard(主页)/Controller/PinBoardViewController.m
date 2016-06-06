@@ -96,8 +96,20 @@ static NSString * const reuseIdentifier = @"PinBoardCell";
 
 - (void)setupRefresh
 {
+    //对tabBarButton的监听
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:YLQTabBarButtonDidRepeatClickNotification object:nil];
+    
     self.collectionView.mj_header = [YLQRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
     self.collectionView.mj_footer = [YLQRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+}
+
+- (void)tabBarButtonDidRepeatClick{
+    //如果当前控制器View不在window上,直接返回
+    //self.view.window 可以拿到所在控制器view在哪一个window上
+    if(self.view.window == nil) return;
+    
+    //下拉刷新
+    [self.collectionView.mj_header beginRefreshing];
 }
 
 - (void)setupLayout

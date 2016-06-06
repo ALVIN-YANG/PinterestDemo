@@ -16,6 +16,9 @@
 
 #define YLQRandomColor Color(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
+//字符串
+#define YLQTabBarButtonDidRepeatClickNotification @"YLQTabBarButtonDidRepeatClickNotification"
+
 /*自定义Log*/
 // 调试
 #ifdef DEBUG
